@@ -1,0 +1,21 @@
+@import url("https://use.typekit.net/ecx8ejn.css");
+
+/* Global rules */
+body {
+    background-color: #ffefff ;
+}
+
+/* Navigation Bar */
+.container-list > a {
+   text-decoration-line: none;
+   color: #0b0b0b;
+}
+
+/* intermittent characters between links */
+.container-list > a:after{content:' |'}
+.container-list > a:last-child:after{content: ''}
+
+.container-list {
+   /* font-family: "karmina-sans"; */
+   font-size: 16pt;
+}
