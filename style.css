@@ -1,7 +1,10 @@
 @import url("https://use.typekit.net/ecx8ejn.css");
 
+:root {--background-color: #111111}
+
 body {
    background-color: #111111;
+   color: ghostwhite;
    font-size: 16pt;
 }
 
@@ -11,21 +14,75 @@ body {
    justify-content: center;
 }
 
-.nav-bar > a:after{
-   content:' | ';
-}
-
-.nav-bar > a:last-child:after{
-   content: '';
-}
-
 .nav-bar > a {
    text-decoration: none;
    color: #e5e7eb;
    word-spacing: 1rem;
-   transition: color 750ms;
+   transition: color 500ms;
+   display: inline;
+   position: relative;
+   padding: 0.2em;
+   overflow: hidden;
 }
 
 .nav-bar > a:hover {
-   color: white;
+   color: white
 }
+
+.nav-bar > a::after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 0.1em;
+   background-color: white;
+   opacity: 0;
+   transition: opacity 300ms, transform 300ms;
+}
+
+.nav-bar > a:hover::after,
+.nav-bar > a:focus::after {
+   opacity: 1;
+   transform: translate3d(0, 0.2em, 0);
+}
+
+.container-hero {
+   width: 75%;
+   height: 200px;
+
+   margin: 200px auto 200px auto;
+   
+   display: flex;
+
+   border: 1px solid white;
+   border-color: white var(--background-color) white var(--background-color);
+
+   transform: skewX(-25deg);
+
+   animation-name: expand;
+   animation-duration: 1.25s;
+}
+
+.hero-text {
+   opacity: 0%;
+
+   margin: auto;
+   position: relative;
+
+   transform: skewX(25deg);
+
+   animation-name: opacity;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-delay: 1s;
+   animation-fill-mode: forwards;
+
+   cursor: default;
+
+}
+
+@keyframes expand {from {height: 0px} to {height: 200px}}
+@keyframes opacity {from {opacity: 0%} to {opacity: 100%}}
+
+
