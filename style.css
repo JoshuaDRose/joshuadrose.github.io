@@ -2,6 +2,14 @@
 
 :root {--background-color: #111111}
 
+h2 {
+   font-weight: 500;
+}
+
+p {
+   font-size: 15pt;
+}
+
 body {
    background-color: #111111;
    color: ghostwhite;
@@ -43,15 +51,16 @@ body {
 
 .nav-bar > a:hover::after,
 .nav-bar > a:focus::after {
-   opacity: 1;
+   opacity: 100%;
    transform: translate3d(0, 0.2em, 0);
 }
 
 .container-hero {
+   position: relative;
    width: 75%;
    height: 200px;
 
-   margin: 200px auto 200px auto;
+   margin: 50px auto 75px auto;
    
    display: flex;
 
@@ -79,10 +88,28 @@ body {
    animation-fill-mode: forwards;
 
    cursor: default;
-
 }
 
+
+.container-about_me {
+   position: relative;
+   margin: 0px auto auto auto;
+   width: 80%;
+   height: 200px;
+   opacity: 0%;
+
+   animation-name: opacity;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-delay: 1.5s;
+   animation-fill-mode: forwards;
+}
+
+.about-wrapper-text {
+   margin: inherit;
+   padding: 10px 20px 10px 20px;
+}
+
+@keyframes contract {from {height: 400px} to {height: 200px}}
 @keyframes expand {from {height: 0px} to {height: 200px}}
 @keyframes opacity {from {opacity: 0%} to {opacity: 100%}}
-
-
