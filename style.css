@@ -161,9 +161,14 @@ body {
    height: 200px;
    margin-left: 3px;
    margin-top: 3px;
+   animation-name: expand;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
 }
 
 .section-centerlon, .section-bravura {
+   overflow: hidden;
    opacity: 0%;
    animation-name: opacity;
    animation-duration: 1s;
@@ -179,7 +184,50 @@ body {
    animation-delay: 150ms;
 }
 
+.item-list > li {
+   animation-duration: 2.5s;
+   animation-fill-mode: forwards;
+   animation-timing-function: ease-in;
+}
+
+footer {
+   margin: 10px auto 10px auto;
+   font-size: medium;
+   overflow: hidden;
+   position: fixed;
+   bottom: 0;
+   text-align: center;
+   width: 100%;
+   opacity: 0%;
+
+   animation-name: opacity;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-delay: 1.75s;
+   animation-fill-mode: forwards;
+}
+
+
+
 @keyframes contract {from {height: 400px} to {height: 200px}}
 @keyframes expand {from {height: 0px} to {height: 200px}}
 @keyframes opacity {from {opacity: 0%} to {opacity: 100%}}
+
+@keyframes expandContainer {
+   from {
+      width: 0px;
+   }
+   to {
+      width: 200px;
+   }
+}
+
+@keyframes expandList {
+   from {
+      margin-left: -200px;
+   }
+   to {
+      margin-left: 0;
+   }
+}
 
