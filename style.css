@@ -90,6 +90,23 @@ body {
    cursor: default;
 }
 
+.container-work-experience {
+   display: flex;
+   flex-flow: row wrap;
+
+   position: relative;
+   margin: 5rem auto 50px auto;
+   width: 80%;
+   height: 200px;
+   opacity: 0%;
+
+   animation-name: opacity;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+
+   font-size: large;
+}
 
 .container-about_me {
    position: relative;
@@ -110,6 +127,59 @@ body {
    padding: 10px 20px 10px 20px;
 }
 
+#title-header {
+   margin-bottom: 0;
+}
+
+.dot-section {
+   width: 20px;
+   padding-top: 28px;
+   display: flex;
+}
+.dot {
+   display: inherit;
+   position: absolute;
+   background-color: white;
+   border-radius: 50%;
+   justify-content: space-between;
+}
+
+.da {
+   height: 10px;
+   width: 10px;
+   margin: 0px auto 0px auto;
+}
+
+.db {
+   height: 10px;
+   width: 10px;
+   margin: 100px auto 0px auto;
+}
+
+.line {
+   border-left: 4px solid white;
+   height: 200px;
+   margin-left: 3px;
+   margin-top: 3px;
+}
+
+.section-centerlon, .section-bravura {
+   opacity: 0%;
+   animation-name: opacity;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+}
+
+.section-bravura {
+   animation-delay: 50;
+}
+
+.section-centerlon {
+   animation-delay: 150ms;
+}
+
 @keyframes contract {from {height: 400px} to {height: 200px}}
 @keyframes expand {from {height: 0px} to {height: 200px}}
 @keyframes opacity {from {opacity: 0%} to {opacity: 100%}}
+
