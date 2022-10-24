@@ -69,7 +69,7 @@ body {
 
    transform: skewX(-25deg);
 
-   animation-name: expand;
+   animation-name: expandHero;
    animation-duration: 1.25s;
 }
 
@@ -80,6 +80,7 @@ body {
    position: relative;
 
    transform: skewX(25deg);
+   transition: 0.3s;
 
    animation-name: opacity;
    animation-duration: 1s;
@@ -89,6 +90,7 @@ body {
 
    cursor: default;
 }
+
 
 .container-work-experience {
    display: flex;
@@ -127,6 +129,8 @@ body {
    padding: 10px 20px 10px 20px;
 }
 
+
+
 #title-header {
    margin-bottom: 0;
 }
@@ -150,7 +154,15 @@ body {
 }
 
 .rect {
-
+   width: 15px;
+   height: 5px;
+   margin: 237px 0px auto -2.5px;
+   opacity: 0%;
+   animation-name: opacity;
+   animation-duration: 200ms;
+   animation-timing-function: linear;
+   animation-delay: 900ms;
+   animation-fill-mode: forwards;
 }
 
 .da {
@@ -190,9 +202,10 @@ body {
 }
 
 .item-list > li {
-   animation-duration: 2.5s;
+   animation: left-to-right;
+   animation-duration: 1s;
    animation-fill-mode: forwards;
-   animation-timing-function: ease-in;
+   animation-timing-function: ease-in-out;
 }
 
 footer {
@@ -212,9 +225,16 @@ footer {
    animation-fill-mode: forwards;
 }
 
+.grow:hover {
+   transform-origin: center;
+   transform: scale(1.2);
+}
+
 @keyframes contract {from {height: 400px} to {height: 200px}}
 @keyframes expand {from {height: 0px} to {height: 235px}}
 @keyframes opacity {from {opacity: 0%} to {opacity: 100%}}
 @keyframes expandContainer {from {width: 0px} to {width: 200px}}
+@keyframes expandHero {from {height: 0px} to {height: 200px}}
 @keyframes expandList {from { margin-left: -200px} to {margin-left: 0}}
-
+@keyframes left-to-right {from {transform: translateX(-100px)} to {transform: translateX(0)}}
+@keyframes grow {from {transform: scale(0.5)} to {transform: scale(1)}}
