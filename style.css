@@ -230,9 +230,42 @@ footer {
    transform: scale(1.2);
 }
 
+.container {
+   width: 30%;
+   display: flex;
+   margin: 15% auto 15% auto;
+}
+
+.contact-list {
+   margin: auto;
+}
+
+.contact-list {
+   padding-left: 0px;
+}
+
+.contact-list > li {
+   display: inline;
+}
+
+.logo-link {
+   width: 128px;
+   animation: ease-in-out opacity 1s forwards;
+}
+
+.logo-link:hover {transition: 500ms opacity ease-in-out}
+
+#linkedin {
+   width: 64px;
+   margin-bottom: 10px;
+}
+
 @keyframes contract {from {height: 400px} to {height: 200px}}
 @keyframes expand {from {height: 0px} to {height: 235px}}
+@keyframes expandLink {from {height: 0px} to {height: 10px}}
+
 @keyframes opacity {from {opacity: 0%} to {opacity: 100%}}
+
 @keyframes expandContainer {from {width: 0px} to {width: 200px}}
 @keyframes expandHero {from {height: 0px} to {height: 200px}}
 @keyframes expandList {from { margin-left: -200px} to {margin-left: 0}}
