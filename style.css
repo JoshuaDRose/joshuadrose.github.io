@@ -61,7 +61,7 @@ body {
    height: 200px;
 
    margin: 50px auto 75px auto;
-   
+
    display: flex;
 
    border: 1px solid white;
@@ -140,6 +140,7 @@ body {
    padding-top: 28px;
    display: flex;
 }
+
 .dot {
    border-radius: 50%;
    height: 10px;
